@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_editprofile" android:icon="@drawable/edit_profile"
+            android:title="@string/edit_profile" />
+        <item android:id="@+id/nav_privacy" android:icon="@drawable/privacy_policy"
+            android:title="@string/private_policy"/>
+        <item android:id="@+id/nav_findfriend" android:icon="@drawable/find_friends"
+            android:title="@string/find_friends" />
+        <item android:id="@+id/nav_tutorial" android:icon="@drawable/tutorial"
+            android:title="@string/tutorial"/>
+        <item android:id="@+id/nav_likeshow" android:icon="@drawable/like_showme"
+            android:title="@string/like_showme"/>
+        <item android:id="@+id/nav_about" android:icon="@drawable/about"
+            android:title="@string/about" />
+        <item android:id="@+id/nav_logout" android:icon="@drawable/log_out"
+            android:title="@string/log_out"/>
+    </group>
+</menu>

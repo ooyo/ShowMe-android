@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/detailScroll"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/eventDetailCard"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                android:id="@+id/galleryView">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/eventImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+
+                    />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    card_view:srcCompat="@drawable/share"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/share"
+                    android:id="@+id/eventDetailShare"
+                    android:background="@drawable/border_white"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:visibility="invisible"
+                    android:contentDescription="@string/none"/>
+
+                <Button
+                    android:text="@string/interested"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@+id/eventDetailShare"
+                    android:id="@+id/eventDetailInterested"
+                    android:drawableStart="@drawable/interested2"
+                    android:background="@drawable/border_white"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+
+                    android:textColor="@color/colorWhite"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:text="@string/going"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/eventDetailGoing"
+                    android:layout_alignParentTop="true"
+                    android:drawableStart="@drawable/going2"
+                    android:layout_toStartOf="@+id/eventDetailInterested"
+                    android:background="@drawable/border_white"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textAllCaps="false" />
+
+                <Button
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/eventDetailInterested"
+                    android:layout_toEndOf="@+id/eventDetailGoing"
+                    android:id="@+id/eventDetailGoingCount"
+                    android:drawableStart="@drawable/going2"
+                    android:background="@null"
+                    android:textColor="@color/colorRestaurant"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginStart="30dp"
+                    android:clickable="false"
+                    android:textAllCaps="false" />
+
+                <Button
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/eventDetailGoingCount"
+                    android:layout_alignStart="@+id/eventDetailGoingCount"
+                    android:id="@+id/eventDetailInterestedCount"
+                    android:drawableStart="@drawable/interested2"
+                    android:textColor="@color/colorRestaurant"
+                    android:background="@null"
+                    android:gravity="start|center_vertical"
+                    android:clickable="false"
+                    android:textAllCaps="false" />
+
+
+                <TextView
+                    android:textColor="@color/colorYellowText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eventDetailTitle"
+                    android:layout_above="@+id/bottomrelative"
+                    android:layout_alignParentStart="true"
+                    android:clickable="false" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/bottomrelative"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignBottom="@+id/eventImage"
+                    android:clickable="false">
+
+                    <TextView
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/eventImageCount"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical|start"
+                        android:clickable="false" />
+
+                    <Button
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:id="@+id/eventDetailTime"
+                        android:drawableStart="@drawable/clock_small"
+                        android:background="@null"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:clickable="false"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/eventDetailAddress"
+                        android:drawableStart="@drawable/pin_small"
+                        android:background="@null"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/eventDetailTime"
+                        android:clickable="false"
+                        android:capitalize="sentences"
+                        android:textAllCaps="false"
+                        android:autoText="false"
+                        android:editable="false"
+                        android:password="false"
+                        android:phoneNumber="false" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:text="@string/about"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventDetailAboutTitle"
+            android:textColor="@color/colorLightGray"
+            android:capitalize="characters"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:textColor="@color/colorLightGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventDetailAbout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"/>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/eventDetailField1"
+                android:textColor="@color/colorLightBlue"
+                android:background="@drawable/border"
+                android:layout_marginStart="5dp"
+                android:textAllCaps="false" />
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/eventDetailField2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorLightBlue"
+                android:background="@drawable/border"
+                android:textAllCaps="false" />
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/eventDetailField3"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorLightBlue"
+                android:background="@drawable/border"
+                android:layout_marginEnd="5dp"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/eventDetailBonusCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/card_margin"
+            android:background="@color/colorWhite"
+            card_view:cardCornerRadius="5dp"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:orientation="vertical"
+                android:layout_height="220dp">
+
+                <TextView
+                    android:id="@+id/eventDetailBonusUser"
+                    android:layout_width="match_parent"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/colorLightGray"
+                    android:layout_height="30dp" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorLightBlue"
+                    android:id="@+id/eventDetailBonusDescription"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/eventDetailBonusUser"
+                    android:id="@+id/eventDetailBonusBG"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="120dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/coupon_ray"
+                        android:src="@drawable/coupon_ray"
+                        android:id="@+id/imageView4"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/bonus"
+                        android:src="@drawable/bonus"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/imageView3"
+                        android:scaleType="centerInside"
+                        android:padding="3dp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:text="@string/address"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventDetailAddressTitle"
+            android:textAllCaps="true"
+            android:textColor="@color/colorLightGray"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/eventDetailAddressCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/album_cover_height"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/card_margin"
+
+            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/map"
+                    tools:context="detail.EventDetailActivity"
+                    android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/eventDetailUserReviews"
+            android:layout_weight="0.59" />
+
+        <Button
+            android:text="@string/allreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="start|center_vertical"
+            android:id="@+id/eventDetailSeeAllReviews"
+            android:textColor="@color/colorLightBlue"
+            android:layout_marginStart="10dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:text="@string/writereview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorLightBlue"
+            android:background="@drawable/border_blue"
+            android:id="@+id/eventDetailWriteReview"
+            android:layout_margin="5dp"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>

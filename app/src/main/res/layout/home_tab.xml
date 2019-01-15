@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorPrimary">
+    <com.rey.material.widget.ProgressView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress"
+        app:pv_progressMode="indeterminate"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progressView" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/gradients"
+        android:src="@drawable/gradients"
+        android:background="@color/colorPrimary"
+        android:id="@+id/imageView5"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/none"/>
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/icon_search"
+        android:src="@drawable/icon_search"
+        android:id="@+id/btnSearch"
+        android:layout_margin="5dp"
+        android:background="@null"
+        android:contentDescription="@string/none"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/include"
+        android:background="@color/colorWhite"
+        android:scrollbarSize="0dp"
+        android:layout_below="@+id/btnSearch">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <include layout="@layout/top_slide"
+                android:id="@+id/topSlide"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                />
+
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:id="@+id/categoryLayout"
+                android:layout_below="@+id/topSlide"
+                android:scrollbars="none"
+                android:background="@color/colorWhite"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageView"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    app:srcCompat="@drawable/explore"
+                    android:padding="5dp"
+                    android:layout_marginStart="5dp"
+                    android:contentDescription="@string/explore"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/explore"
+                    android:id="@+id/homeExploreTitle"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imageView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/colorLightBlue" />
+
+                <additional.CustomGridView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gridView"
+                    android:numColumns="3"
+                    android:longClickable="false"
+                    android:choiceMode="singleChoice"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageView"
+                    android:scrollbars="none"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/customized_category"
+                    android:id="@+id/homeExploreSubtitle"
+                    android:padding="0dp"
+                    android:textColor="@color/colorLightGray"
+                    android:layout_below="@+id/homeExploreTitle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignStart="@+id/homeExploreTitle" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categoryLayout"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorWhite">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/discoverImage"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    app:srcCompat="@drawable/discover"
+                    android:contentDescription="@string/discover"
+                    android:layout_marginStart="5dp"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/discover"
+                    android:id="@+id/homeDiscoverTitle"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/discoverImage"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/colorLightBlue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/trending_event"
+                    android:id="@+id/homeDiscoverDescription"
+                    android:layout_below="@+id/homeDiscoverTitle"
+                    android:layout_alignEnd="@+id/homeDiscoverTitle"
+                    android:padding="0dp"
+                    android:textColor="@color/colorLightGray"
+                    android:layout_alignStart="@+id/homeDiscoverTitle" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycler_view"
+                    android:layout_below="@+id/discoverImage"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorPrimary"
+                    android:paddingTop="10dp"
+                      />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <include layout="@layout/tab_bars"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/include"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+
+
+</RelativeLayout>

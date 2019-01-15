@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+
+        card_view:cardCornerRadius="@dimen/event_card_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/cardMainImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_cover_height"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="false"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                card_view:srcCompat="@drawable/going_mark"
+                android:contentDescription="@string/badge"
+                android:id="@+id/cardMark"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="26dp"
+                android:layout_marginTop="-1dp"
+                android:clickable="false" />
+
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+                android:id="@+id/cardDetailBottom"
+                android:layout_below="@+id/cardMainImage"
+                android:layout_alignParentStart="true"
+                android:clickable="false">
+
+                <Button
+                    android:textColor="@color/colorLightGray"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/cardTime"
+                    android:drawableStart="@drawable/time_icon"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:layout_height="30dp" />
+
+                <Button
+                    android:textColor="@color/colorLightGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/cardTime"
+                    android:layout_alignStart="@+id/cardTime"
+                    android:id="@+id/cardLike"
+                    android:drawableStart="@drawable/like_icon"
+                    android:background="@null"
+                    android:clickable="false" />
+
+                <additional.CircledNetworkImageView
+                    card_view:srcCompat="@android:drawable/ic_menu_gallery"
+                    android:id="@+id/cardGoing1"
+                    android:layout_marginStart="12dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/none"/>
+
+                <additional.CircledNetworkImageView
+                    card_view:srcCompat="@android:drawable/ic_menu_gallery"
+                    android:id="@+id/cardGoing3"
+                    android:layout_alignTop="@+id/cardGoing1"
+                    android:layout_toEndOf="@+id/cardGoing1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/none"/>
+
+                <additional.CircledNetworkImageView
+                    card_view:srcCompat="@android:drawable/ic_menu_gallery"
+                    android:id="@+id/cardGoing2"
+                    android:layout_alignTop="@+id/cardGoing3"
+                    android:layout_toEndOf="@+id/cardGoing3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/none"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cardDetailBottom"
+                android:background="@drawable/gradient"
+                android:gravity="bottom"
+                android:layout_below="@+id/cardMark">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardTitle"
+                    android:clickable="false"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    card_view:srcCompat="@drawable/cat_activity_round"
+                    android:id="@+id/cardCatImage"
+                    android:scaleType="fitStart"
+                    android:clickable="false"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="@string/tabCategory"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

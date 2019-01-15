@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_marker_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/pin_white"  />
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/eventPlaceLogo"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/btn_logo"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle"
+            app:siBorderColor="@color/colorWhite"
+            app:siBorderWidth="1dp"
+            android:layout_marginTop="18dp" />
+    </RelativeLayout>
+
+
+</FrameLayout>

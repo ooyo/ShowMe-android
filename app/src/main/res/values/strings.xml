@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Show Me</string>
+    <string name="facebook_app_id">433904960124007</string>
+
+    <string name="tabHome">Home</string>
+    <string name="tabCategory">Category</string>
+    <string name="tabProfile">Profile</string>
+    <string name="tabMap">Map</string>
+    <string name="explore">Explore</string>
+    <string name="none">none</string>
+    <string name="customized_category">Event categories customized for you</string>
+    <string name="discover">Discover</string>
+    <string name="trending_event">Trending events today</string>
+    <string name="badge">badge</string>
+    <string name="going">Going</string>
+    <string name="interested">Interested</string>
+    <string name="about">About</string>
+    <string name="allreview">See all reviews …</string>
+    <string name="writereview">Write a review</string>
+    <string name="address">Address</string>
+    <string name="follow">Follow</string>
+    <string name="following">Following</string>
+    <string name="submit">Submit</string>
+
+    <string name="edit_profile">Edit profile</string>
+    <string name="private_policy">Privacy Policy</string>
+    <string name="find_friends">Find Friends</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="like_showme">Like ShowMe</string>
+    <string name="log_out">Log Out</string>
+
+
+
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Check into!</string>
+    <string name="slide_1_desc">Share and check in to your favorite places that you like to visit!</string>
+
+    <string name="slide_2_title">Find New Places</string>
+    <string name="slide_2_desc">Find new places and see other user\'s suggestions!</string>
+
+    <string name="slide_3_title">Real Bonuses</string>
+    <string name="slide_3_desc">Get real bonuses from the places that you love visiting make them care about you!</string>
+
+    <string name="slide_4_title">Get idolize</string>
+    <string name="slide_4_desc">Get followers and follow the other users that you idolize!</string>
+
+    <string name="slide_5_title">Find same interests</string>
+    <string name="slide_5_desc">Make new friends with the people that has same interests!</string>
+
+    <string name="slide_6_title">Get the latest</string>
+    <string name="slide_6_desc">Get the latest news directly from the places so you wouldn\'t miss it!</string>
+
+    <string name="slide_7_title">Explore the entertainment</string>
+    <string name="slide_7_desc">Explore the entertainment world that you don\'t know!</string>
+
+    <string name="play_again">Play Again</string>
+
+
+</resources>

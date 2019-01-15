@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/blue_gradient"
+        android:id="@+id/imageView8"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/searchTxt"
+        android:src="@drawable/blue_gradient"
+        android:adjustViewBounds="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:background="@color/colorWhite"
+        android:ems="10"
+        android:id="@+id/searchTxt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view"
+        android:layout_above="@+id/include"
+        android:layout_below="@+id/searchTxt" />
+
+    <include layout="@layout/tab_bars"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/include"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

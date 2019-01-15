@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tabHome"
+            android:id="@+id/homeTAB"
+            android:drawableTop="@drawable/tab_none"
+            android:paddingTop="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorWhite"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/tabhome"
+            android:textAllCaps="false"
+            android:layout_weight="0.25" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tabCategory"
+            android:id="@+id/categoryTAB"
+            android:drawableTop="@drawable/tab_none"
+            android:background="@drawable/tabcategory"
+            android:paddingTop="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorWhite"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textAllCaps="false"
+            android:layout_weight="0.25" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tabMap"
+            android:id="@+id/mapTAB"
+            android:drawableTop="@drawable/tab_none"
+            android:background="@drawable/tabmap"
+            android:paddingTop="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorWhite"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textAllCaps="false"
+            android:layout_weight="0.25" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tabProfile"
+            android:drawableTop="@drawable/tab_none"
+            android:id="@+id/profileTAB"
+            android:background="@drawable/tabprofile"
+            android:paddingTop="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorWhite"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textAllCaps="false"
+            android:layout_weight="0.25" />
+</TableRow>

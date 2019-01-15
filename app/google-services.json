@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "720804760339",
+    "project_id": "show-me-c1c26"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720804760339:android:6226cffbf3f589c7",
+        "android_client_info": {
+          "package_name": "ooyo.mn.showme"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwO6RJf8jnc4WOw3_m1-XyUU9Lx1XJlLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

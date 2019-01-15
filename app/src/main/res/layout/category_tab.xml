@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <com.rey.material.widget.ProgressView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress"
+        app:pv_progressMode="indeterminate"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progressView" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView7"
+        android:src="@drawable/gradients"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/none"
+        android:background="@color/colorPrimary" />
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/icon_search"
+        android:src="@drawable/icon_search"
+        android:id="@+id/btnSearch"
+        android:layout_margin="5dp"
+        android:background="@null"
+        android:contentDescription="@string/none"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+    <include layout="@layout/top_slide"
+        android:id="@+id/topSlide"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/btnSearch" />
+
+    <additional.CustomGridView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:id="@+id/gridView"
+        android:numColumns="3"
+        android:longClickable="false"
+        android:choiceMode="singleChoice"
+        android:layout_below="@id/topSlide"
+        android:layout_above="@+id/include"
+        android:background="@color/colorWhite" />
+    <include layout="@layout/tab_bars"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/include" />
+
+
+</RelativeLayout>

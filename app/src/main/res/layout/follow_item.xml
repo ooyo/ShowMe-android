@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <additional.CircledNetworkImageView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/noimage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/followItemUserImage"
+        app:siBorderWidth="1dp"
+        app:siBorderColor="@color/colorWhite"
+        android:src="@drawable/noimage"
+        android:layout_margin="5dp"
+        android:clickable="false"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/followItemUserName"
+        android:layout_alignBottom="@+id/followItemUserImage"
+        android:layout_alignTop="@+id/followItemUserImage"
+        android:layout_toEndOf="@+id/followItemUserImage"
+        android:gravity="start|center_vertical"
+        android:clickable="false"/>
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:id="@+id/followItemUserButton"
+        android:background="@drawable/border_blue"
+        android:layout_marginEnd="3dp"
+        android:textAllCaps="false"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@+id/followItemUserName"
+        android:layout_alignBottom="@+id/followItemUserName"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/followItemUserImage"
+        android:id="@+id/followRelative"
+        android:background="@null"
+        style="@null"
+        android:layout_toStartOf="@+id/followItemUserButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/followItemUserButton" />
+</RelativeLayout>
